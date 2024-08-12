@@ -1,13 +1,30 @@
 ---
-import Badge from '../components/Badge.astro';
-import Layout from '../layouts/Layout.astro';
+import Badge from "../components/Badge.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<h1>Hey, I'm AlberTECH <Badge>Disponible para trabajar</Badge></h1>
-		<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem consequuntur sed deserunt velit, distinctio laudantium delectus illum tempora nam natus, eveniet aliquid ipsam quos saepe, sequi quaerat voluptatibus illo totam.</h2>
+		<section class="w-full lg:w-[740px] mx-auto py-44">
+			<img
+				class="w-12 h-12 mb-4"
+				src="https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShaggyMullet&accessoriesType=Blank&hairColor=Black&facialHairType=Blank&clotheType=ShirtCrewNeck&clotheColor=Heather&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light"
+			/>
+			<h1
+				class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10"
+			>
+				Hey, I'm AlberTECH <a
+					href="https://www.linkedin.com/in/albdiamun"
+					target="_blank"
+					rel="noopener"
+					class="flex justify-center items-center"
+					><Badge>Disponible para trabajar</Badge></a
+				>
+			</h1>
+			<h2 class="text-2xl text-wrap">
+				Desarrollador de Software con una sólida formación en <span class="text-green-200/90">Finanzas</span>.
+				De Sevilla, España 🇪🇸.
+			</h2>
+		</section>
 	</main>
 </Layout>
-
-
