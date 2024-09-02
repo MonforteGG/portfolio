@@ -1,0 +1,28 @@
+---
+const PROJECTS = [
+    {
+        title: 'Tibia Discord Bot',
+        description: "This is a Discord bot for the game Tibia, programmed in Python with discord.py. It is designed for the Mortalis server of soerpg.com. It provides various functions such as adding names to a list, performing web scraping to check level ups and character deaths, checking who is online, and NPC Rashid's location. Additionally, it uses OpenCV for image processing and loot classification by selling places, among other things.",
+        link: '#',
+        github: '#',
+        image: 'https://camo.githubusercontent.com/54f19e4a0f79756b11cc32cb90af36d7d1c70250659b086d981abecda99524a4/68747470733a2f2f692e696d6775722e636f6d2f656472476c59302e706e67',
+        tags: ['HTML', 'CSS']
+
+    }
+]
+---
+
+{
+    PROJECTS.map(({ title, description, tags, image }) => (
+        <article>
+            <h3>{title}</h3>
+            <p>{description}</p>
+            <ul>
+                {tags.map(tag => (
+                    <li>{tag}</li>
+                ))}
+            </ul>
+            <img src={image} alt={title}>
+        </article>
+    ))
+}

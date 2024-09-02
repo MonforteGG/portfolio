@@ -1,30 +1,93 @@
 ---
-import Badge from "../components/Badge.astro";
 import Layout from "../layouts/Layout.astro";
+
+import Badge from "../components/Badge.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Experience from "../components/Experience.astro";
+
+import SocialPill from "../components/SocialPill.astro";
+import LinkedInIcon from "../components/icons/Linkedin.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import UpWorkIcon from "../components/icons/UpWork.astro";
+import GmailIcon from "../components/icons/Gmail.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import BriefcaseIcon from "../components/icons/Briefcase.astro";
+import Projects from "../components/Projects.astro";
+
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<section class="w-full lg:w-[740px] mx-auto py-44">
+<Layout
+	title="Portfolio de AlberTECH, Desarrollador y Programador con formación sólida en Finanzas "
+	description="¡Bienvenido a la página de AlberTECH! Soy un Desarrollador de Software Fullstack con una sólida formación en Finanzas, radicado en Sevilla, España. Mi pasión es crear soluciones tecnológicas innovadoras y eficientes, y actualmente estoy disponible para nuevas oportunidades laborales. Explora mi portafolio para conocer mis proyectos recientes, mis habilidades técnicas y cómo puedo aportar valor a tu próximo proyecto. Conéctate conmigo a través de LinkedIn, GitHub, UpWork, o contáctame directamente por correo electrónico para colaborar en soluciones digitales que transformen ideas en realidad."
+>
+	<main class="px-4">
+		<SectionContainer id="top" class="py-44 pb-24">
 			<img
-				class="w-12 h-12 mb-4"
-				src="https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShaggyMullet&accessoriesType=Blank&hairColor=Black&facialHairType=Blank&clotheType=ShirtCrewNeck&clotheColor=Heather&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light"
+				class="size-32 rounded-full mb-10"
+				src="https://i.imgur.com/b2ZgZqV.jpeg"
 			/>
-			<h1
-				class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10"
-			>
-				Hey, I'm AlberTECH <a
-					href="https://www.linkedin.com/in/albdiamun"
-					target="_blank"
-					rel="noopener"
-					class="flex justify-center items-center"
-					><Badge>Disponible para trabajar</Badge></a
+			<h1 class="text-white text-3xl md:text-4xl xl:text-5xl font-bold flex flex-row pb-3 mb-2">
+				Hey, soy Alber<span
+					class="bg-gradient-to-br from-green-300 to-green-800 bg-clip-text text-transparent"
+					>Tech</span
 				>
 			</h1>
-			<h2 class="text-2xl text-wrap">
-				Desarrollador de Software con una sólida formación en <span class="text-green-200/90">Finanzas</span>.
-				De Sevilla, España 🇪🇸.
+			<a
+				href="https://www.linkedin.com/in/albdiamun"
+				target="_blank"
+				rel="noopener"
+				class="flex justify-center items-center"
+				><Badge>Disponible para trabajar</Badge>
+			</a>
+			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+				Desarrollador de Software <span class="text-green-300/90"
+					>Fullstack</span
+				> con una sólida formación en <span class="text-green-300/90"
+					>Finanzas</span
+				>. De Sevilla, España 🇪🇸.
 			</h2>
-		</section>
+
+			<nav class="flex gap-4 mt-5 flex-wrap">
+				<SocialPill href="https://www.linkedin.com/in/albdiamun">
+					<LinkedInIcon class="size-3 lg:size-6" />
+					Linkedin
+				</SocialPill>
+
+				<SocialPill href="https://github.com/MonforteGG/">
+					<GitHubIcon class="size-3 lg:size-6" />
+					GitHub
+				</SocialPill>
+
+				<SocialPill
+					href="https://www.upwork.com/freelancers/~0128aa2578b92fc863?mp_source=share"
+				>
+					<UpWorkIcon class="size-3 lg:size-6" />
+					UpWork
+				</SocialPill>
+
+				<SocialPill href="mailto:albdiamun@gmail.com">
+					<GmailIcon class="size-3 lg:size-6" />
+					albdiamun@gmail.com
+				</SocialPill>
+			</nav>
+			
+		</SectionContainer>
+		
+		<SectionContainer id="experiencia" class="mb-10">
+			
+			<h2 class="text-3xl font-normal mb-6 flex items-center gap-x-2">
+				<BriefcaseIcon />
+				Experiencia Laboral
+			</h2>
+			<Experience />
+		</SectionContainer>
+
+		<SectionContainer id="proyectos" class="">
+			<h2 class="text-3xl font-normal mb-6 flex items-center gap-x-2">
+				<CodeIcon />
+				Proyectos
+			</h2>
+			<Projects />
+		</SectionContainer>
 	</main>
 </Layout>
