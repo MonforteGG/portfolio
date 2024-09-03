@@ -1,0 +1,38 @@
+--- 
+
+
+---
+
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.21/build/spline-viewer.js"></script>
+<spline-viewer loading-anim-type="spinner-big-light" url="https://prod.spline.design/Q1xkNryaqYOBtF9L/scene.splinecode"></spline-viewer>
+<script type="module">
+    // Función para intentar manipular el componente después de que esté listo
+    function attemptToStyleLogo() {
+      const splineViewer = document.querySelector('spline-viewer');
+  
+      if (splineViewer) {
+        // Verificar que el shadow DOM está disponible
+        const shadowRoot = splineViewer.shadowRoot;
+        
+        if (shadowRoot) {
+          const logo = shadowRoot.querySelector('#logo');
+          if (logo) {
+            logo.style.visibility = 'hidden';
+            // Otros estilos
+          } else {
+            console.log('Elemento #logo no encontrado en el shadow DOM');
+          }
+        } else {
+          console.log('shadowRoot no disponible');
+        }
+      } else {
+        console.log('Componente spline-viewer no encontrado');
+      }
+    }
+  
+    // Intentar aplicar los estilos después de un breve retraso para asegurar que el componente esté cargado
+    setTimeout(attemptToStyleLogo, 500); // Retraso de 1 segundo
+  </script>
+
+
+

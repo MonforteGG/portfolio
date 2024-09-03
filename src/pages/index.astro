@@ -13,6 +13,7 @@ import GmailIcon from "../components/icons/Gmail.astro";
 import CodeIcon from "../components/icons/Code.astro";
 import BriefcaseIcon from "../components/icons/Briefcase.astro";
 import Projects from "../components/Projects.astro";
+import SplineViewer from "../components/SplineViewer.astro";
 
 ---
 
@@ -24,14 +25,16 @@ import Projects from "../components/Projects.astro";
 		<SectionContainer id="top" class="py-44 pb-24">
 			<img
 				class="size-32 rounded-full mb-10"
-				src="https://i.imgur.com/b2ZgZqV.jpeg"
+				src="/foto_adm.webp"
 			/>
 			<h1 class="text-white text-3xl md:text-4xl xl:text-5xl font-bold flex flex-row pb-3 mb-2">
 				Hey, soy Alber<span
-					class="bg-gradient-to-br from-green-300 to-green-800 bg-clip-text text-transparent"
+					class="bg-gradient-to-br from-lime-300 to-green-800 bg-clip-text text-transparent"
 					>Tech</span
 				>
 			</h1>
+			
+			
 			<a
 				href="https://www.linkedin.com/in/albdiamun"
 				target="_blank"
@@ -40,9 +43,9 @@ import Projects from "../components/Projects.astro";
 				><Badge>Disponible para trabajar</Badge>
 			</a>
 			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
-				Desarrollador de Software <span class="text-green-300/90"
+				Desarrollador de Software <span class="text-lime-500"
 					>Fullstack</span
-				> con una sólida formación en <span class="text-green-300/90"
+				> con una sólida formación en <span class="text-lime-500"
 					>Finanzas</span
 				>. De Sevilla, España 🇪🇸.
 			</h2>
@@ -70,7 +73,7 @@ import Projects from "../components/Projects.astro";
 					albdiamun@gmail.com
 				</SocialPill>
 			</nav>
-			
+			<SplineViewer/>
 		</SectionContainer>
 		
 		<SectionContainer id="experiencia" class="mb-10">
@@ -83,7 +86,7 @@ import Projects from "../components/Projects.astro";
 		</SectionContainer>
 
 		<SectionContainer id="proyectos" class="">
-			<h2 class="text-3xl font-normal mb-6 flex items-center gap-x-2">
+			<h2 class="text-3xl font-normal mb-20 flex items-center gap-x-2">
 				<CodeIcon />
 				Proyectos
 			</h2>

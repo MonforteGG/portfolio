@@ -1,12 +1,54 @@
 ---
+import Python from './icons/Python.astro'
+import Llama3 from './icons/Llama3.astro'
+import NextJS from './icons/NextJS.astro'
+import Tailwind from './icons/Tailwind.astro'
+
+const TAGS = {
+
+    PYTHON: {
+        name: "Python",
+        class: "bg-white/10 text-white font-bold",
+        icon: Python
+    },
+    LLAMA3: {
+        name: "Llama",
+        class: "bg-white/10 text-white font-bold",
+        icon: Llama3
+    },
+    TAILWIND: {
+        name: "Tailwind",
+        class: "bg-white/10 text-white font-bold",
+        icon: Tailwind
+    },
+    NEXTJS: {
+        name: "Next.js",
+        class: "bg-white/10 text-white font-bold",
+        icon: NextJS
+    }
+
+}
+
 const PROJECTS = [
     {
         title: 'Tibia Discord Bot',
-        description: "This is a Discord bot for the game Tibia, programmed in Python with discord.py. It is designed for the Mortalis server of soerpg.com. It provides various functions such as adding names to a list, performing web scraping to check level ups and character deaths, checking who is online, and NPC Rashid's location. Additionally, it uses OpenCV for image processing and loot classification by selling places, among other things.",
+        description: 
+            "Bot de Discord para el juego Tibia, hecho en Python. Realiza tareas como agregar personajes, Web Scraping para avisar de las subidas de nivel y de las muertes, verificar quién está en línea, ubicar al NPC Rashid y usar OpenCV para clasificar el loot.",
         link: '#',
-        github: '#',
-        image: 'https://camo.githubusercontent.com/54f19e4a0f79756b11cc32cb90af36d7d1c70250659b086d981abecda99524a4/68747470733a2f2f692e696d6775722e636f6d2f656472476c59302e706e67',
-        tags: ['HTML', 'CSS']
+        github: 'https://github.com/MonforteGG/soe-bot',
+        image: '/projects/tibia_bot2.png',
+        tags: [TAGS.PYTHON]
+
+    },
+
+    {
+        title: 'EnerGYM',
+        description: 
+            "Aplicación web que utiliza inteligencia artificial para analizar tus listas de reproducción de Spotify y determinar qué tan óptima es cada canción para hacer ejercicio.",
+        link: '#',
+        github: 'https://github.com/MonforteGG/energym',
+        image: '/projects/energym2.png',
+        tags: [TAGS.NEXTJS, TAGS.LLAMA3, TAGS.TAILWIND]
 
     }
 ]
@@ -14,15 +56,24 @@ const PROJECTS = [
 
 {
     PROJECTS.map(({ title, description, tags, image }) => (
-        <article>
-            <h3>{title}</h3>
-            <p>{description}</p>
-            <ul>
-                {tags.map(tag => (
-                    <li>{tag}</li>
-                ))}
-            </ul>
-            <img src={image} alt={title}>
+        <article class="flex gap-10 py-10">
+            <span >
+                <img class="rounded-md shadow-2xl shadow-white/10 w-60 lg:w-96 max-w-[420px]" src={image} alt={`Captura del proyecto ${title}`} />
+            </span>
+            <span class="flex flex-col gap-2">
+                <h3 class=" text-xl lg:text-2xl font-semibold text-lime-400">{title}</h3>
+                <ul class="flex flex-wrap gap-2">
+                    {tags.map(tag => (
+                        <li>
+                            <span class={`flex items-center gap-x-1 pl-1 pr-3 rounded-full text-xs ${tag.class}`}>
+                                <tag.icon class="size-6" />
+                                {tag.name}
+                            </span>
+                        </li>
+                    ))}
+                </ul>
+                <p class=" text-xs lg:text-base text-pretty max-w-5xl">{description}</p>
+            </span>
         </article>
     ))
 }
