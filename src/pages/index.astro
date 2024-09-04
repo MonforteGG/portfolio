@@ -4,6 +4,11 @@ import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Experience from "../components/Experience.astro";
+import Reviews from "../components/Reviews.astro";
+import AboutMe from "../components/AboutMe.astro";
+import Projects from "../components/Projects.astro";
+import SplineViewer from "../components/SplineViewer.astro";
+
 
 import SocialPill from "../components/SocialPill.astro";
 import LinkedInIcon from "../components/icons/Linkedin.astro";
@@ -12,8 +17,10 @@ import UpWorkIcon from "../components/icons/UpWork.astro";
 import GmailIcon from "../components/icons/Gmail.astro";
 import CodeIcon from "../components/icons/Code.astro";
 import BriefcaseIcon from "../components/icons/Briefcase.astro";
-import Projects from "../components/Projects.astro";
-import SplineViewer from "../components/SplineViewer.astro";
+import UserIcon from "../components/icons/User.astro";
+import StarIcon from "../components/icons/Star.astro";
+
+
 
 ---
 
@@ -28,9 +35,9 @@ import SplineViewer from "../components/SplineViewer.astro";
 				src="/foto_adm.webp"
 			/>
 			<h1 class="text-white text-3xl md:text-4xl xl:text-5xl font-bold flex flex-row pb-3 mb-2">
-				Hey, soy Alber<span
+				Hey, soy alber<span
 					class="bg-gradient-to-br from-lime-300 to-green-800 bg-clip-text text-transparent"
-					>Tech</span
+					>tech</span
 				>
 			</h1>
 			
@@ -73,24 +80,40 @@ import SplineViewer from "../components/SplineViewer.astro";
 					albdiamun@gmail.com
 				</SocialPill>
 			</nav>
-			<SplineViewer/>
+		
 		</SectionContainer>
 		
 		<SectionContainer id="experiencia" class="mb-10">
 			
 			<h2 class="text-3xl font-normal mb-6 flex items-center gap-x-2">
-				<BriefcaseIcon />
+				<BriefcaseIcon class="size-3 lg:size-6"/>
 				Experiencia Laboral
 			</h2>
 			<Experience />
 		</SectionContainer>
 
+		<SectionContainer>
+			<h2 class="text-3xl font-normal mb-6 flex items-center gap-x-2">
+				<StarIcon class="size-3 lg:size-6"/>
+				Valoraciones
+			</h2>
+			<Reviews/>
+		</SectionContainer>
+
 		<SectionContainer id="proyectos" class="">
 			<h2 class="text-3xl font-normal mb-20 flex items-center gap-x-2">
-				<CodeIcon />
+				<CodeIcon class="size-3 lg:size-6"/>
 				Proyectos
 			</h2>
 			<Projects />
 		</SectionContainer>
+		<SectionContainer id="sobre-mi">
+			<h2 class="text-3xl font-normal mb-20 flex items-center gap-x-2">
+				<UserIcon class="size-3 lg:size-6"/>
+				Sobre mi
+			</h2>
+			<AboutMe/>
+		</SectionContainer>
+		
 	</main>
 </Layout>

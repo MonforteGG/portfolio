@@ -1,0 +1,22 @@
+---
+
+const REVIEWS = [
+
+    {
+        title: "Upwork review 1: PDF Scraping with Python",
+        image: "/reviews/review1.png"
+    }
+
+]
+    
+---
+
+{
+    REVIEWS.map(({ title, image }) => (
+        <article class="flex gap-10 py-10">
+            <img class="rounded-md shadow-2xl shadow-lime-400/5 lg:scale-75 lg:hover:scale-90 transition  " loading="lazy" src={image} alt={`Captura de la valoración de ${title}`} />
+        </article>
+    ))
+}
+
+

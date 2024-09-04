@@ -30,16 +30,6 @@ const TAGS = {
 }
 
 const PROJECTS = [
-    {
-        title: 'Tibia Discord Bot',
-        description: 
-            "Bot de Discord para el juego Tibia, hecho en Python. Realiza tareas como agregar personajes, Web Scraping para avisar de las subidas de nivel y de las muertes, verificar quién está en línea, ubicar al NPC Rashid y usar OpenCV para clasificar el loot.",
-        link: '#',
-        github: 'https://github.com/MonforteGG/soe-bot',
-        image: '/projects/tibia_bot2.png',
-        tags: [TAGS.PYTHON]
-
-    },
 
     {
         title: 'EnerGYM',
@@ -47,19 +37,34 @@ const PROJECTS = [
             "Aplicación web que utiliza inteligencia artificial para analizar tus listas de reproducción de Spotify y determinar qué tan óptima es cada canción para hacer ejercicio.",
         link: '#',
         github: 'https://github.com/MonforteGG/energym',
-        image: '/projects/energym2.png',
+        image: '/projects/energym2.webp',
         tags: [TAGS.NEXTJS, TAGS.LLAMA3, TAGS.TAILWIND]
 
+    },
+    
+    {
+        title: 'Tibia Discord Bot',
+        description: 
+            "Bot de Discord para el juego Tibia, hecho en Python. Realiza tareas como agregar personajes, Web Scraping para avisar de las subidas de nivel y de las muertes, verificar quién está en línea, ubicar al NPC Rashid y usar OpenCV para clasificar el loot.",
+        link: '#',
+        github: 'https://github.com/MonforteGG/soe-bot',
+        image: '/projects/tibia_bot2.webp',
+        tags: [TAGS.PYTHON]
+
     }
+
+    
 ]
 ---
 
 {
     PROJECTS.map(({ title, description, tags, image }) => (
         <article class="flex gap-10 py-10">
-            <span >
-                <img class="rounded-md shadow-2xl shadow-white/10 w-60 lg:w-96 max-w-[420px]" src={image} alt={`Captura del proyecto ${title}`} />
-            </span>
+            <div>
+            <div class="overflow-hidden rounded-md shadow-2xl shadow-lime-400/15 lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+                <img class="object-cover object-top w-60 lg:w-96 max-w-[420px] md:scale-105 md:hover:scale-100 transition duration-500" loading="lazy" src={image} alt={`Captura del proyecto ${title}`} />
+            </div>
+            </div>
             <span class="flex flex-col gap-2">
                 <h3 class=" text-xl lg:text-2xl font-semibold text-lime-400">{title}</h3>
                 <ul class="flex flex-wrap gap-2">
