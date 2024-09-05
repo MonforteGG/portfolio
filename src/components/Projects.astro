@@ -37,7 +37,7 @@ const PROJECTS = [
             "Aplicación web que utiliza inteligencia artificial para analizar tus listas de reproducción de Spotify y determinar qué tan óptima es cada canción para hacer ejercicio.",
         link: "https://energym-drab.vercel.app/",
         github: "https://github.com/MonforteGG/energym",
-        image: "/projects/energym2.webp",
+        image: "/projects/energym.webp",
         tags: [TAGS.NEXTJS, TAGS.LLAMA3, TAGS.TAILWIND],
     },
 
@@ -46,59 +46,65 @@ const PROJECTS = [
         description:
             "Bot de Discord para el juego Tibia, hecho en Python. Realiza tareas como agregar personajes, Web Scraping para avisar de las subidas de nivel y de las muertes, verificar quién está en línea, ubicar al NPC Rashid y usar OpenCV para clasificar el loot.",
         github: "https://github.com/MonforteGG/soe-bot",
-        image: "/projects/tibia_bot2.webp",
+        image: "/projects/tibia_bot.webp",
         tags: [TAGS.PYTHON],
     },
 ];
 ---
 
-{
-    PROJECTS.map(({ title, description, tags, link, github, image }) => (
-        <article class="flex gap-10 py-10">
-            <div>
-                <div class="overflow-hidden rounded-md shadow-2xl shadow-lime-400/15 lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-                    <img
-                        class="object-cover object-top w-60 lg:w-96 max-w-[420px] md:scale-105 md:hover:scale-100 transition duration-500"
-                        loading="lazy"
-                        src={image}
-                        alt={`Captura del proyecto ${title}`}
-                    />
+<div class="flex flex-col gap-y-16">
+    {
+        PROJECTS.map(({ image, title, description, tags, link, github }) => (
+            <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+                <div class="w-full md:w-1/2">
+                    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+                        <img
+                            alt={`Captura del proyecto ${title}`}
+                            class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+                            loading="lazy"
+                            src={image}
+                        />
+                    </div>
                 </div>
-            </div>
-            <span class="flex flex-col gap-2">
-                <h3 class=" text-xl lg:text-2xl font-semibold text-lime-400">
-                    {title}
-                </h3>
-                <ul class="flex flex-wrap gap-2">
-                    {tags.map((tag) => (
-                        <li>
-                            <span
-                                class={`flex items-center gap-x-1 pl-1 pr-3 rounded-full text-xs ${tag.class}`}
-                            >
-                                <tag.icon class="size-6" />
-                                {tag.name}
-                            </span>
-                        </li>
-                    ))}
-                </ul>
-                <p class=" text-xs lg:text-base text-gray-300 text-pretty max-w-5xl">
-                    {description}
-                </p>
-                <footer class="flex items-end justify-start mt-4 gap-x-4">
-                    {github && (
-                        <LinkButton href={github}>
-                            <GitHub class="size-6" />
-                            Code
-                        </LinkButton>
-                    )}
-                    {link && (
-                        <LinkButton href={link}>
-                            <Link class="size-4" />
-                            Preview
-                        </LinkButton>
-                    )}
-                </footer>
-            </span>
-        </article>
-    ))
-}
+
+                <div class="w-full md:w-1/2 md:max-w-lg">
+                    <h3 class=" text-xl lg:text-2xl font-semibold text-lime-400">
+                        {title}
+                    </h3>
+                    <div class="flex flex-wrap mt-2">
+                        <ul class="flex flex-row mb-2 gap-x-2">
+                            {tags.map((tag) => (
+                                <li>
+                                    <span
+                                        class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                                    >
+                                        <tag.icon class="size-4" />
+                                        {tag.name}
+                                    </span>
+                                </li>
+                            ))}
+                        </ul>
+
+                        <div class="mt-2 text-gray-300 text-pretty text-sm lg:text-base">
+                            {description}
+                        </div>
+                        <footer class="flex items-end justify-start mt-4 gap-x-4">
+                            {github && (
+                                <LinkButton href={github}>
+                                    <GitHub class="size-3 lg:size-6" />
+                                    Code
+                                </LinkButton>
+                            )}
+                            {link && (
+                                <LinkButton href={link}>
+                                    <Link class="size-3 lg:size-6" />
+                                    Preview
+                                </LinkButton>
+                            )}
+                        </footer>
+                    </div>
+                </div>
+            </article>
+        ))
+    }
+</div>

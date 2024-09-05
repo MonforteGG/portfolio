@@ -7,7 +7,7 @@ import Experience from "../components/Experience.astro";
 import Reviews from "../components/Reviews.astro";
 import AboutMe from "../components/AboutMe.astro";
 import Projects from "../components/Projects.astro";
-import SplineViewer from "../components/SplineViewer.astro";
+import TitleSection from "../components/TitleSection.astro";
 
 
 import SocialPill from "../components/SocialPill.astro";
@@ -85,33 +85,33 @@ import StarIcon from "../components/icons/Star.astro";
 		
 		<SectionContainer id="experiencia" class="mb-10">
 			
-			<h2 class="text-3xl font-normal mb-6 flex items-center gap-x-2">
-				<BriefcaseIcon class="size-3 lg:size-6"/>
+			<TitleSection>
+				<BriefcaseIcon class="size-6"/>
 				Experiencia Laboral
-			</h2>
+			</TitleSection>
 			<Experience />
 		</SectionContainer>
 
 		<SectionContainer>
-			<h2 class="text-3xl font-normal mb-6 flex items-center gap-x-2">
-				<StarIcon class="size-3 lg:size-6"/>
+			<TitleSection>
+				<StarIcon class="size-6"/>
 				Valoraciones
-			</h2>
+			</TitleSection>
 			<Reviews/>
 		</SectionContainer>
 
 		<SectionContainer id="proyectos" class="">
-			<h2 class="text-3xl font-normal mb-20 flex items-center gap-x-2">
-				<CodeIcon class="size-3 lg:size-6"/>
+			<TitleSection>
+				<CodeIcon class="size-6"/>
 				Proyectos
-			</h2>
+			</TitleSection>
 			<Projects />
 		</SectionContainer>
 		<SectionContainer id="sobre-mi">
-			<h2 class="text-3xl font-normal mb-20 flex items-center gap-x-2">
-				<UserIcon class="size-3 lg:size-6"/>
+			<TitleSection>
+				<UserIcon class="size-6"/>
 				Sobre mí
-			</h2>
+			</TitleSection>
 			<AboutMe/>
 		</SectionContainer>
 		
