@@ -1,9 +1,101 @@
-<header class="flex justify-center items-center py-5 w-full xl:w-[1120px] mx-auto">
-    <nav class="flex flex-row text-sm gap-x-2 lg:gap-x-10 opacity-80">
-        <a class="hover:opacity-100 hover:scale-105 transition" href="#top">Inicio</a>
-        <a class="hover:opacity-100 hover:scale-105 transition" href="#experiencia">Experiencia</a>
-        <a class="hover:opacity-100 hover:scale-105 transition" href="#proyectos">Proyectos</a>
-        <a class="hover:opacity-100 hover:scale-105 transition" href="#sobre-mi">Sobre mi</a>
-        <a class="hover:opacity-100 hover:scale-105 transition" href="#contacto">Contacto</a>
+---
+
+
+const navItems = [
+
+
+    {
+        title: "Inicio",
+        label: "inicio",
+        url: "/#top",
+    },
+    {
+        title: "Experiencia",
+        label: "experiencia",
+        url: "/#experiencia",
+    },
+    {
+        title: "Proyectos",
+        label: "proyectos",
+        url: "/#proyectos",
+    },
+    {
+        title: "Sobre mí",
+        label: "sobre-mi",
+        url: "/#sobre-mi",
+    }
+];
+---
+
+<header
+    class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+>
+    <nav
+        class="flex px-3 text-sm font-medium rounded-full text-gray-200 justify-center items-center"
+    >
+        {
+            navItems.map((link) => (
+                <a
+                    class="relative block px-2 py-2 transition hover:text-lime-500"
+                    aria-label={link.label}
+                    href={link.url}
+                >
+                    {link.title}
+                </a>
+            ))
+        }
+        
+    <a
+        class="bg-clip-text text-sm font-bold text-transparent px-2 py-2 bg-gradient-to-r from-gray-200 from-30% via-lime-700 via-45% to-gray-200 to-90% animate-text hover:text-lime-500 transition"
+        href="mailto:albdiamun@gmail.com">
+        Contacto
+    </a>
+    
+</div>
+
     </nav>
+    
 </header>
+
+
+<style>
+    nav {
+        animation: nav-shadown 1s linear both;
+        animation-timeline: scroll();
+        animation-range: 0 100px;
+    }
+
+    nav {
+        @apply bg-gray-800/95;
+    }
+
+    @keyframes nav-shadown {
+        0% {
+            @apply bg-gray-800/0;
+        }
+        to {
+            @apply shadow-lg ring-1 ring-white/10;
+        }
+    }
+
+    @keyframes text {
+    0% {
+        background-position: 0% 0%;
+    }
+    33% {
+        background-position: -200% 0%;
+    }
+    100% {
+        background-position: -200% 0%;
+    }
+}
+
+.animate-text {
+    animation: text 6s linear infinite;
+    
+    background-size: 240% 100%;
+    
+}
+
+
+</style>
