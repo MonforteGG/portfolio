@@ -1,0 +1,97 @@
+---
+import Git from "./icons/Git.astro";
+import GitHub from "./icons/GitHub.astro";
+import Html from "./icons/Html.astro";
+import NextJS from "./icons/NextJS.astro";
+import Python from "./icons/Python.astro";
+import MongoDB from "./icons/MongoDB.astro";
+import Java from "./icons/Java.astro";
+import CSS from "./icons/CSS.astro";
+import JavaScript from "./icons/JavaScript.astro";
+import FastAPI from "./icons/FastAPI.astro";
+import Astroo from "./icons/Astroo.astro";
+import MySQL from "./icons/MySQL.astro";
+import Node from "./icons/Node.astro";
+import Tailwind from "./icons/Tailwind.astro";
+---
+
+<div class="row-wrap relative flex-col items-center justify-center w-72 md:w-1/2 overflow-hidden whitespace-nowrap rounded-xl p-4 md:p-6 border border-gray-800 gap-10">
+    <ul class="row-content-one flex gap-10 mb-10">
+        <li><Html class="size-8 md:size-12" /></li>
+        <li><CSS class="size-8 md:size-12" /></li>
+        <li><Tailwind class="size-8 md:size-12" /></li>
+        <li><JavaScript class="size-8 md:size-12" /></li>
+        <li><Node class="size-8 md:size-12" /></li>
+        <li><NextJS class="size-8 md:size-12" /></li>
+        <li><Astroo class="size-8 md:size-12" /></li>
+        <li><Html class="size-8 md:size-12" /></li>
+        <li><CSS class="size-8 md:size-12" /></li>
+        <li><Tailwind class="size-8 md:size-12" /></li>
+        <li><JavaScript class="size-8 md:size-12" /></li>
+        <li><Node class="size-8 md:size-12" /></li>
+        <li><NextJS class="size-8 md:size-12" /></li>
+        <li><Astroo class="size-8 md:size-12" /></li>
+    </ul>
+    <ul class="row-content-two flex gap-10">
+        <li><GitHub class="size-8 md:size-12" /></li>
+        <li><Git class="size-8 md:size-12" /></li>
+        <li><Python class="size-8 md:size-12" /></li>
+        <li><FastAPI class="size-8 md:size-12" /></li>
+        <li><Java class="size-8 md:size-12" /></li>
+        <li><MongoDB class="size-8 md:size-12" /></li>
+        <li><MySQL class="size-8 md:size-12" /></li>
+        <li><GitHub class="size-8 md:size-12" /></li>
+        <li><Git class="size-8 md:size-12" /></li>
+        <li><Python class="size-8 md:size-12" /></li>
+        <li><FastAPI class="size-8 md:size-12" /></li>
+        <li><Java class="size-8 md:size-12" /></li>
+        <li><MongoDB class="size-8 md:size-12" /></li>
+        <li><MySQL class="size-8 md:size-12" /></li>
+    </ul>
+</div>
+
+<style>
+    .row-wrap {
+        position: relative;
+        mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 1.0) 10%, rgba(0, 0, 0, 1.0) 90%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 1.0) 10%, rgba(0, 0, 0, 1.0) 90%, transparent 100%);
+    }
+
+    .row-content-one, .row-content-two {
+        width: 200%; 
+        animation: slide 20s linear infinite;
+        animation-play-state: running;
+    }
+
+    .row-content-two {
+        animation-direction: reverse;
+    }
+
+    @keyframes slide {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-83%);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .row-content-one, .row-content-two {
+            width: 200%;
+        }
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-99%);
+            }
+        }
+    }
+
+    .row-content-one:hover,
+    .row-content-two:hover {
+        animation-play-state: paused;
+    }
+</style>

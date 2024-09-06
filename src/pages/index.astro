@@ -7,8 +7,8 @@ import Experience from "../components/Experience.astro";
 import Reviews from "../components/Reviews.astro";
 import AboutMe from "../components/AboutMe.astro";
 import Projects from "../components/Projects.astro";
+import Technologies from "../components/Technologies.astro";
 import TitleSection from "../components/TitleSection.astro";
-
 
 import SocialPill from "../components/SocialPill.astro";
 import LinkedInIcon from "../components/icons/Linkedin.astro";
@@ -19,9 +19,7 @@ import CodeIcon from "../components/icons/Code.astro";
 import BriefcaseIcon from "../components/icons/Briefcase.astro";
 import UserIcon from "../components/icons/User.astro";
 import StarIcon from "../components/icons/Star.astro";
-
-
-
+import BoltIcon from "../components/icons/Bolt.astro";
 ---
 
 <Layout
@@ -30,17 +28,16 @@ import StarIcon from "../components/icons/Star.astro";
 >
 	<main class="px-4">
 		<SectionContainer id="top" class="py-44 pb-24">
-			<img
-				class="size-32 rounded-full mb-10"
-				src="/foto_adm.webp"
-			/>
-			<h1 class="text-white text-3xl md:text-4xl xl:text-5xl font-bold flex flex-row pb-3 mb-2">
+			<img class="size-32 rounded-full mb-10" src="/foto_adm.webp" />
+			<h1
+				class="text-white text-3xl md:text-4xl xl:text-5xl font-bold flex flex-row pb-3 mb-2"
+			>
 				Hey, soy alber<span
 					class="bg-gradient-to-br from-lime-300 to-green-800 bg-clip-text text-transparent"
 					>tech</span
 				>
 			</h1>
-			
+
 			<a
 				href="https://www.linkedin.com/in/albdiamun"
 				target="_blank"
@@ -68,7 +65,8 @@ import StarIcon from "../components/icons/Star.astro";
 				</SocialPill>
 
 				<SocialPill
-					href="https://www.upwork.com/freelancers/~0128aa2578b92fc863?mp_source=share" download
+					href="https://www.upwork.com/freelancers/~0128aa2578b92fc863?mp_source=share"
+					download
 				>
 					<DownloadIcon class="size-3 lg:size-6" />
 					CV
@@ -79,14 +77,11 @@ import StarIcon from "../components/icons/Star.astro";
 					albdiamun@gmail.com
 				</SocialPill>
 			</nav>
-			
-		
 		</SectionContainer>
-		
-		<SectionContainer id="experiencia" class="mb-10">
-			
+
+		<SectionContainer id="experiencia">
 			<TitleSection>
-				<BriefcaseIcon class="size-6"/>
+				<BriefcaseIcon class="size-6" />
 				Experiencia Laboral
 			</TitleSection>
 			<Experience />
@@ -94,26 +89,35 @@ import StarIcon from "../components/icons/Star.astro";
 
 		<SectionContainer>
 			<TitleSection>
-				<StarIcon class="size-6"/>
+				<StarIcon class="size-6" />
 				Valoraciones
 			</TitleSection>
-			<Reviews/>
+			<Reviews />
 		</SectionContainer>
 
-		<SectionContainer id="proyectos" class="">
+		<SectionContainer id="proyectos">
 			<TitleSection>
-				<CodeIcon class="size-6"/>
+				<CodeIcon class="size-6" />
 				Proyectos
 			</TitleSection>
 			<Projects />
 		</SectionContainer>
-		<SectionContainer id="sobre-mi">
+
+		<SectionContainer id="tecnologias">
 			<TitleSection>
-				<UserIcon class="size-6"/>
-				Sobre mí
+					<BoltIcon class="size-6" />
+					Tecnologías
 			</TitleSection>
-			<AboutMe/>
+			<Technologies/>
 		</SectionContainer>
-		
+
+			<SectionContainer id="sobre-mi">
+				<TitleSection>
+					<UserIcon class="size-6" />
+					Sobre mí
+				</TitleSection>
+				<AboutMe />
+			</SectionContainer>
+		</SectionContainer>
 	</main>
 </Layout>
