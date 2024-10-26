@@ -2,6 +2,7 @@
 import Python from "./icons/Python.astro";
 import Llama3 from "./icons/Llama3.astro";
 import NextJS from "./icons/NextJS.astro";
+import MySQL from "./icons/MySQL.astro";
 import Tailwind from "./icons/Tailwind.astro";
 import GitHub from "./icons/GitHub.astro";
 import Link from "./icons/Link.astro";
@@ -28,6 +29,13 @@ const TAGS = {
         class: "bg-white/10 text-white font-bold",
         icon: NextJS,
     },
+    MYSQL: {
+        name: "MySQL",
+        class: "bg-white/10 text-white font-bold",
+        icon: MySQL,
+    },
+
+    
 };
 
 const PROJECTS = [
@@ -48,6 +56,15 @@ const PROJECTS = [
         github: "https://github.com/MonforteGG/soe-bot",
         image: "/projects/tibia_bot.webp",
         tags: [TAGS.PYTHON],
+    },
+
+    {
+        title: "Idealisto Bot",
+        description:
+            "Idealisto es un bot de Telegram en Python que obtiene anuncios de viviendas de Idealista y los guarda en una base de datos MySQL. Compara el precio por metro cuadrado con el promedio de los anuncios previos y envía al grupo de Telegram las novedades y cambios de precio más relevantes.",
+        github: "https://github.com/MonforteGG/idealisto",
+        image: "/projects/idealisto.webp",
+        tags: [TAGS.PYTHON, TAGS.MYSQL]
     },
 ];
 ---
